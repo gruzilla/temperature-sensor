@@ -7,9 +7,9 @@ import adafruit_max31865
 spi = board.SPI()
 
 # Drei getrennte Chip-Select-Leitungen
-cs1 = digitalio.DigitalInOut(board.D8)   # GPIO8, physical Pin 24
-cs2 = digitalio.DigitalInOut(board.D7)   # GPIO7, physical Pin 26
-cs3 = digitalio.DigitalInOut(board.D5)   # GPIO5, physical Pin 29
+cs1 = digitalio.DigitalInOut(board.D5)    # GPIO5, physical Pin 29
+cs2 = digitalio.DigitalInOut(board.D6)    # GPIO6, physical Pin 31
+cs3 = digitalio.DigitalInOut(board.D13)   # GPIO13, physical Pin 33
 
 
 # ------------------------------------------------------------
