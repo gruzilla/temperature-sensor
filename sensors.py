@@ -60,22 +60,25 @@ sensor3 = adafruit_max31865.MAX31865(
 
 while True:
     try:
+        d1 = sensor1.read_rtd()
         t1 = sensor1.temperature
         r1 = sensor1.resistance
         f1 = sensor1.fault
 
+        d2 = sensor2.read_rtd()
         t2 = sensor2.temperature
         r2 = sensor2.resistance
         f2 = sensor2.fault
 
+        d3 = sensor3.read_rtd()
         t3 = sensor3.temperature
         r3 = sensor3.resistance
         f3 = sensor3.fault
 
         print(
-            f"Sensor 1: {t1:7.2f} °C   {r1:8.3f} Ω   F:{f1}   | "
-            f"Sensor 2: {t2:7.2f} °C   {r2:8.3f} Ω   F:{f2}   | "
-            f"Sensor 3: {t3:7.2f} °C   {r3:8.3f} Ω   F:{f3}"
+            f"Sensor 1: {t1:7.2f} °C   {r1:8.3f} Ω   F:{f1}   R:{d1}   | "
+            f"Sensor 2: {t2:7.2f} °C   {r2:8.3f} Ω   F:{f2}   R:{d2}   | "
+            f"Sensor 3: {t3:7.2f} °C   {r3:8.3f} Ω   F:{f3}   R:{d3}"
         )
 
     except Exception as e:
